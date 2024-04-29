@@ -4,6 +4,7 @@ WORKDIR /app
 COPY . .
 
 RUN <<EOF
+chmod +x gradlew
 ./gradlew bootJar
 mv build/libs/*.jar app.jar
 EOF

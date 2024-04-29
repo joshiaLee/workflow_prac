@@ -10,6 +10,7 @@ COPY . .
 # 3. 소스코드 빌드
 # RUN: 이미지를 설정하기 위한 명령이다.
 RUN <<EOF
+chmod +x gradlew
 ./gradlew bootJar
 mv build/libs/*.jar app.jar
 EOF
